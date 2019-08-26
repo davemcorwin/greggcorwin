@@ -13,12 +13,12 @@
     <meta property="og:description" content="Gregg Corwin for Hopkins City Council, a leap ahead for Hopkins.">
     <meta property="og:url" content="https://www.greggcorwin.com/">
     <meta property="og:site_name" content="Gregg Corwin">
-    <!-- <meta property="og:image" content="https://berniesanders.com/wp-content/uploads/2019/02/fob-sap-social.png">
-    <meta property="og:image:secure_url" content="https://berniesanders.com/wp-content/uploads/2019/02/fob-sap-social.png"> -->
+    <meta property="og:image" content="https://www.greggcorwin.com/greggcorwin.png">
+    <meta property="og:image:secure_url" content="https://www.greggcorwin.com/greggcorwin.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:description" content="Gregg Corwin for Hopkins City Council, a leap ahead for Hopkins.">
     <meta name="twitter:title" content="Gregg Corwin 2019, a leap ahead.">
-    <!-- <meta name="twitter:image" content="https://berniesanders.com/wp-content/uploads/2019/02/fob-sap-social.png"> -->
+    <meta name="twitter:image" content="https://www.greggcorwin.com/greggcorwin.png">
     
     <link rel="stylesheet" href="/normalize.css">
     <style>
@@ -86,6 +86,7 @@
       #connect {
         background-color: #054E95;
         color: white;
+        padding-bottom: 4rem;
       }
 
       footer {
@@ -129,6 +130,49 @@
           max-width: initial;
         }
       }
+
+      input[name="spam-field"], .display-none {
+        display: none;
+      }
+
+      input[type="submit"] {
+        background-color: #4faef0;
+        border-color: #4faef0;
+        color: white;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #72bdf3;
+      }
+
+      input, textarea {
+        background-color: #ebeef5;
+        border-radius: 2px;
+        box-sizing: border-box;
+        font-family: sans-serif; 
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        padding: .75rem;
+        width: 100%;
+      }
+
+      @media (min-width: 960px) {
+        #contact {
+          align-items: flex-start;
+          display: flex;
+          justify-content: center;
+        }
+        input, textarea {
+          margin-left: 1rem;
+        }
+        input[type="submit"] {
+          display: inline;
+          width: initial;
+        }
+      }
     </style>
   </head>
   <body>
@@ -155,7 +199,15 @@
         <p class="lead">He is a member of the Bureau of Mediation Services Arbitrator Advisory Board and has co-chaired the American Bar Association’s National Conference on Labor and Employment Law and its annual EEO Committee Annual Conference. He also is a planner for the Minnesota CLE’s Annual Public Sector Labor Law Conference and the Minnesota CLE fall Labor and Employment Law Institute. He has been elected to the College of Labor and Employment Lawyer which comprises the top labor and employment law lawyers in North America and is a Super Lawyer and listed in the Best Lawyers in America for over 20 years.</p>
       </section>
       <section id="connect" class="section">
-        <h2 class="slogan">Connect with us</h2>
+        <h2 class="slogan">Connect with me</h2>
+        <form id="contact" name="contact" netlify-honeypot="spam-field" method="post" action="thank-you" netlify>
+          <input id="spam-field" name="spam-field" type="text">
+          <label for="email" class="display-none">Email</label>
+          <input id="email" name="email" type="email" placeholder="Email Address" required/>
+          <label for="description" class="display-none">Description</label>
+          <textarea id="description" name="description" rows="3" placeholder="How can I help?" required></textarea>
+          <input type="submit" value="Send"/>
+        </form>
       </section>
     </main>
     <footer class="section">
