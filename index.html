@@ -95,15 +95,30 @@
       .copyright {
         font-size: small;
         font-weight: lighter;
-        margin-top: 2rem;
+        margin-top: 4rem;
       }
 
-      @media (min-width: 540px) {
-        #banner {
-          text-align: center;
-          padding: 2rem;
+      #banner {
+        height: 504px;
+      }
+
+      #banner img {
+        max-width: 100%;
+      }
+
+      .flexy {
+        text-align: center;
+      }
+
+      @media (min-width: 1050px) {
+        .flexy {
+          display: flex;
+        }
+        #banner img {
+          max-width: initial;
         }
       }
+
     </style>
   </head>
   <body>
