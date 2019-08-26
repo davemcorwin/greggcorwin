@@ -105,7 +105,13 @@
       #banner img {
         max-width: 100%;
       }
-
+      
+      @media (min-width: 540px) {
+        #banner {
+          margin: 2rem 0;
+        }
+      }
+      
       .flexy {
         text-align: center;
       }
@@ -114,11 +120,15 @@
         .flexy {
           display: flex;
         }
+        
+        #banner {
+          margin: 0;
+        }
+
         #banner img {
           max-width: initial;
         }
       }
-
     </style>
   </head>
   <body>
